@@ -1,0 +1,109 @@
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif; /* Or Arial */
+  margin: 0; /* Remove any unnecessary margin */
+  padding: 0;
+  height: 100vh; /* Ensure the body takes up the full viewport height */
+  display: flex; /* Flexbox for centering content */
+  justify-content: center;
+  align-items: center;
+  color: #333; /* Default text color */
+  
+  /* Background with gradient and image */
+  background: url('https://ibb.co/bvb1mC3') no-repeat center center fixed !important;
+background-size: cover !important; /* Ensure the image covers the entire viewport */
+}
+   
+  h1 {
+    font-size: 2.5rem;
+    color: #5e87ca;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .container {
+    background: #171717;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    width: 350px;
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 0.9rem;
+    color: lightgray;
+  }
+  
+  button {
+    background-color: #434a53;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: darkgray;
+  }
+  
+  input, select {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  input:focus, select:focus {
+    outline: none;
+    border-color: #61a9cd;
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  button.secondary {
+    background-color: #6c757d;
+  }
+  
+  button.secondary:hover {
+    background-color: #5a6268;
+  }
+  
+  #signup-form {
+    display: none;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container {
+      width: 90%;
+      padding: 20px;
+    }
+  
+    h1 {
+      font-size: 2rem;
+    }
+  
+    h2 {
+      font-size: 1.2rem;
+    }
+  
+    button {
+      font-size: 0.9rem;
+    }
+  }
+ 

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CampusConnect</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>CampusConnect</h1>
+    
+    <!-- Login Form -->
+    <div id="login-form">
+      <h2>Login</h2>
+      <input type="email" id="login-email" placeholder="Email">
+      <input type="password" id="login-password" placeholder="Password">
+      <button onclick="login()">Login</button>
+      <p>Don’t have an account? <button onclick="showSignup()">Sign Up</button></p>
+    </div>
+
+    <!-- Sign Up Form -->
+    <div id="signup-form" style="display: none;">
+      <h2>Sign Up</h2>
+      <input type="email" id="signup-email" placeholder="Email">
+      <input type="password" id="signup-password" placeholder="Password">
+      <select id="account-type">
+        <option value="student">Student</option>
+        <option value="college">College</option>
+      </select>
+      <button onclick="signup()">Sign Up</button>
+      <p>Already have an account? <button onclick="showLogin()">Login</button></p>
+    </div>
+
+    <!-- Cities Section - Hidden initially -->
+    <div id="cities-section" style="display: none;">
+      <h2>Select Location</h2>
+      <label for="area">Select Area:</label>
+      <select id="area">
+        <option value="area3">Abids</option>
+        <option value="area2">Begumpet</option>
+        <option value="area3">Moinabad</option>
+        <option value="area1">Mehdipatnam</option>
+        <option value="area3">Secundrabad</option>
+        <option value="area3">Tolichowki</option>
+       </select>
+
+      <label for="city">Select City:</label>
+      <select id="city">
+        <option value="city1">Delhi</option>
+        <option value="city2">Hyderabad</option>
+        <option value="city3">Bombay</option>
+        <option value="city3">Pune</option>
+        <option value="city3">Chennai</option>
+      </select>
+
+      <button onclick="submitLocation()">Submit</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

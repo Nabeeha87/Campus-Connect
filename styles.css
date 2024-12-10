@@ -1,0 +1,9 @@
+body {
+    background-color:rgb(166, 135, 216);
+  }
+  h2 {
+    color: rgb(20, 19, 19);
+    text-align: center;
+    font-family: "Franklin Gothic Heavy";
+    font-size: 25px;
+  }

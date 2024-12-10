@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Notifications</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #c5d5c5;
+            color: #4f3222;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            color: #4f3222;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+            color: #4f3222;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        /* Center the address selection section */
+        #address-selection {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        /* Input and button styling */
+        #user-address {
+            padding: 10px;
+            width: 100%;
+            max-width: 400px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        #fetch-notifications {
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            border: none;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        #fetch-notifications:hover {
+            background-color: #45a049;
+        }
+
+        #notification-container {
+            margin-top: 20px;
+        }
+
+        .notification-item {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #c5d5c5;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>College Notifications</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="address-selection">
+            <h2>Select Your Address</h2>
+            <input type="text" id="user-address" placeholder="Enter your address">
+            <button id="fetch-notifications">Get Notifications</button>
+        </section>
+        <section id="notification-container">
+            <h2>Latest Notifications</h2>
+            <div id="notification-list"></div>
+        </section>
+    </main>
+    <footer>
+        <p>2024 &copy; CAMPUSCONNECT</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const notificationList = document.getElementById('notification-list');
+            const fetchButton = document.getElementById('fetch-notifications');
+
+            // Sample notifications data
+            const sampleNotifications = [
+                {
+                    title: "New Course Available: Data Science",
+                    message: "Enroll now for the new Data Science course starting next month.",
+                    date: "2025-10-01"
+                },
+                {
+                    title: "College Fair This Weekend",
+                    message: "Join us for the annual college fair on October 5th at the main hall.",
+                    date: "2025-10-02"
+                },
+                {
+                    title: "Scholarship Applications Open",
+                    message: "Apply for the Fall 2023 scholarships by October 15th.",
+                    date: "2025-10-03"
+                },
+                {
+                    title: "Guest Lecture: AI in Education",
+                    message: "Don't miss the guest lecture on AI in Education on October 10th.",
+                    date: "2025-10-04"
+                }
+            ];
+
+            fetchButton.addEventListener('click', () => {
+                const userAddress = document.getElementById('user-address').value;
+                if (!userAddress) {
+                    alert('Please enter an address.');
+                    return;
+                }
+
+                // Clear previous notifications
+                notificationList.innerHTML = '';
+
+                // Display sample notifications
+                sampleNotifications.forEach(notification => {
+                    const notificationItem = document.createElement('div');
+                    notificationItem.classList.add('notification-item');
+                    notificationItem.innerHTML = `
+                        <h3>${notification.title}</h3>
+                        <p>${notification.message}</p>
+                        <p><strong>Date:</strong> ${notification.date}</p>
+                    `;
+                    notificationList.appendChild(notificationItem);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

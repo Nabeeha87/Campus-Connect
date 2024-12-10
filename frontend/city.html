@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CampusConnect - Address and City</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to CampusConnect</h1>
+    <form id="addressForm" action="/submit-address" method="POST">
+      <label for="address">Address:</label>
+      <input type="text" id="address" name="address" required>
+
+      <label for="city">City:</label>
+      <input type="text" id="city" name="city" required>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <script>
+    // You can add any JavaScript needed for additional front-end logic or validation
+    document.getElementById('addressForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      // Send data to the server using Fetch API (optional)
+      const formData = new FormData(this);
+      fetch('/submit-address', {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => response.json())
+      .then(data => {
+        alert('Address and city updated!');
+      })
+      .catch(error => console.error('Error:', error));
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WELCOME TO CAMPUSCONNECT!</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Favicon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #b1cbbb; 
+            color: #563f46;
+        }
+        .event-text {
+            text-align: center;
+            font-size: 18px; /* Adjust size as needed */
+            margin-bottom: 10px; /* Space between text and header */
+            font-weight: bold; /* Optional: Make text bold */
+            color: #563f46;
+            padding-top:10px; /* Change color as needed */
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #77a8a8; 
+            padding: 20px;
+        }
+
+        .logo {
+            display: flex; 
+            align-items: center; 
+            margin-right: auto;
+        }
+
+        h1 {
+            color: #fff; 
+            font-weight: bold;
+            margin: 0 20px;
+        }
+
+        .circle-logo {
+            border-radius: 50%; 
+            width: 100px; 
+            height: 100px; 
+            margin-right: 10px; 
+        }
+
+        nav {
+            margin-left: 20px;
+            display: inline; 
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            display: inline;
+        }
+
+        .search-container {
+            display: flex; 
+            align-items: center;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-left: 10px;
+        }
+
+        button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #563f46; 
+            color: white; 
+            cursor: pointer;
+            margin-left: 5px; 
+        }
+
+        button:hover {
+            background-color: lightpink; 
+        }
+
+        #banner {
+            text-align: center;
+            padding: 20px;
+            margin: 0; 
+            background-color: #c0ded9; 
+        }
+
+        .carousel {
+            display: flex;
+            overflow: hidden;
+            position: relative;
+            width: 70%; 
+            margin: auto;
+        }
+
+        .carousel-inner {
+            display: flex;
+            transition: transform 0.5s ease;
+            width: 100%; /* Ensure full width */
+        }
+
+        .banner-item {
+            min-width: 100%; /* One image at a time */
+            box-sizing: border-box;
+            padding: 0; /* No padding for full width */
+        }
+
+        .banner-item img {
+            width: 100%; /* Image fills banner item */
+            height: auto; 
+            border-radius: 10px; /* Rounded corners */
+        }
+
+        .category {
+            padding: 20px;
+            max-width: 100%; 
+            margin: auto;
+            background-color: #ffebee; /* Light Red */
+            text-align: center; 
+        }
+
+        .category h2 {
+            color: #c62828;
+            margin-bottom: 20px;
+        }
+
+        .product {
+            border: 1px solid #ddd;
+            border-radius: 10px; 
+            padding: 15px;
+            background-color: #f9E4BC; 
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: inline-block;
+            width: 30%; 
+            margin: 10px;
+            box-sizing: border-box;
+        }
+
+        .product img {
+            width: 100%; 
+            height: auto;
+            max-height: 230px; 
+            object-fit: cover; 
+            border-radius: 10px; 
+        }
+
+        .reviews {
+            text-align: center;
+            padding: 20px;
+            background-color: #f3e5f5; /* Light Purple */
+            margin: 20px 0;
+        }
+
+        .reviews-carousel {
+            display: flex;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .review {
+            min-width: 100%;
+            font-style: italic;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .helpline {
+            text-align: center;
+            padding: 20px;
+            color: white;
+            margin-top: 20px;
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            background-color: #f2e2a4; 
+        }
+
+        .designing-team {
+            text-align: right; 
+            font-size: 1em; 
+        }
+
+        .team-photo {
+            border-radius: 15%;
+            width: 60px; 
+            height: 60px; 
+            margin-right: 10px;
+        }
+
+        footer {
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+            background-color: #800021;
+            color: white;
+            padding: 20px;
+            margin-top: 0; 
+        }
+
+        footer div {
+            margin: 0; 
+        }
+
+        .products-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Add some styles for the headline */
+        .news-headline {
+            text-align: center;
+            font-size: 24px;
+            color: #ff5722;
+            margin-top: 30px;
+            font-weight: bold;
+        }
+
+        .news-headline a {
+            color: maroon;
+            text-decoration: none;
+        }
+
+        .news-headline a:hover {
+            text-decoration: underline;
+        }
+        .profile-icon {
+            font-size: 50px;
+            color: black;
+            transition: transform 0.3s ease-in-out;
+            margin-left: 20px; /* Space between the search bar and profile icon */
+        }
+        .profile-icon:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="https://ibb.co/drWTWPg" class="circle-logo">
+    </div>
+    <h2><center>WELCOME TO CAMPUSCONNECT</center></h2>
+    
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Colleges</a>
+        <a href="#">Helpline</a>
+        <a href="#">Contact Us</a>
+    </nav>
+    <div class="search-container">
+        <input type="text" placeholder="Search...">
+        <button>Search</button>
+    </div>
+    <i class="fas fa-user profile-icon" ></i>
+</header>
+
+<!-- Event Brochure Section -->
+<div class="event-text">EVENT BROCHER</div>
+<!-- News Headline Section -->
+<div class="news-headline">
+    <a href="notification.html">Click here for the Latest Notifications!</a>
+</div>
+<section id="banner">
+    <div class="carousel">
+        <div class="carousel-inner" id="carousel-inner">
+            <div class="banner-item">
+                <img src="https://ibb.co/ZX1J7vM" alt="Halloween Sale">
+            </div>
+            <div class="banner-item">
+                <img src="https://ibb.co/tQ19zP4" alt="Electronics Sale">
+            </div>
+            <div class="banner-item">
+                <img src="https://ibb.co/nk75Tqc" alt="Apparel Sale">
+            </div>
+            <div class="banner-item">
+                <img src="https://ibb.co/zfKVPLc" alt="Cosmetics Sale">
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    let currentIndex = 0;
+
+    function moveCarousel() {
+        const carouselInner = document.getElementById('carousel-inner');
+        const totalItems = carouselInner.children.length;
+        currentIndex = (currentIndex + 1) % totalItems; 
+        carouselInner.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    setInterval(moveCarousel, 3000); // Change slides every 3 seconds
+</script>
+
+<!-- Add your content sections here -->
+
+<footer>
+    <div><h1>Contact Us:</h1></div> 
+    <div>Know More: info@campusconnect.com</div>
+    <div>Address: Main St, Hyderabad, India</div>
+    <div><a href="#" style="color: white;">Facebook</a> | <a href="#" style="color: white;">Instagram</a> | <a href="#" style="color: white;">Twitter</a></div>
+</footer>
+
+</body>
+</html>
